@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a307eba-1396-43b6-96dd-9ab2eca842d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/KonfUpr1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_shell.py" afterDir="false" />
-    </list>
+    <list default="true" id="3a307eba-1396-43b6-96dd-9ab2eca842d8" name="Changes" comment="Part 1. REPL" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,8 +61,17 @@
       <updated>1757060149753</updated>
       <workItem from="1757060151145" duration="3065000" />
       <workItem from="1757598962570" duration="2591000" />
-      <workItem from="1757663489121" duration="58000" />
+      <workItem from="1757663489121" duration="284000" />
     </task>
+    <task id="LOCAL-00001" summary="Part 1. REPL">
+      <option name="closed" value="true" />
+      <created>1757663675685</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1757663675685</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,6 +87,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Part 1. REPL" />
+    <option name="LAST_COMMIT_MESSAGE" value="Part 1. REPL" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/KonfUpr1$my_shell.coverage" NAME="my_shell Coverage Results" MODIFIED="1757603153294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
