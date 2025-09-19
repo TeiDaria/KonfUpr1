@@ -2,14 +2,39 @@ import os
 import socket
 import sys
 import shlex #для понимания команд с кавычками
+import argparse #парсер аргументов
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description='My shell emulator')
+    # учимся понимать параметры:
+    parser.add_argument('--vfs-path',
+                        default='',
+                        help='Path to the vfs directory')
+    parser.add_argument('--script',
+                        default=None,
+                        help='Script to execute')
+    parser.add_argument('--debug',
+                        action='store_true',
+                        help='Turn on debug mode')
+    return parser.parse_args()  # узнаем команду
 
 class ShellEmulator:
-    def __init__(self):
-        print("Initializing ShellEmulator")
+    def __init__(self, vfs_path=None, debug=False):
+        ##print("Initializing ShellEmulator with parametres")
+
         self.current_dir = os.getcwd() #запоминаем текущую (исходную) директорию
         self.username = os.getenv('USERNAME','user') #узнаем имя пользователя
         self.hostname = socket.gethostname() #узнаем имя компьютера
         self.running = True #Флаг работаем или нет
+
+        self.vfs_path = vfs_path or './vfs'
+        self.debug = debug
+
+        if debug:
+            print(f" Настройки: VFS путь = {self.vfs_path}")
+            print(f" Режим отладки: ВКЛЮЧЕН")
+
         print("Print 'exit' to stop")
 
     def get_promt(self): #приглашение к вводу
@@ -70,8 +95,55 @@ class ShellEmulator:
                 print("\nВыход...")
                 break
 
+    def run_script(self, script_path):
+        if not os.path.exists(script_path):
+            print("Script not found")
+            return
+        print(f"Running script: {script_path}")
+        print("~" * 50)
+
+        try:
+            with open(script_path, 'r') as file:
+                lines = file.readlines()
+
+                for line_num, line in enumerate(lines, 1):
+                    line = line.strip()
+
+                    if not line or line.startswith('#'):
+                        continue #пропускаем пустые строки
+
+                    if self.debug:
+                        print(f"Reading line {line_num}: {line}")
+
+                    #Показываем команду как будто её ввел пользователь
+                    print(self.get_promt()+line)
+
+                    #Выполняем программу
+                    parts = self.parse_command(line)
+                    if parts is not None:
+                        self.execute_command(parts)
+                    print() #пустая строка между командами
+
+        except Exception as e:
+            print(f"Error while reading script: {e}")
+
+
 
 #запускаем эмулятор
 if __name__ == "__main__":
-    shell = ShellEmulator()
-    shell.run()
+    #узнаем какие параметры нам дали
+    args = parse_args()
+
+    if args.debug:
+        print("Debug mode:")
+        print(f"VFS path: {args.vfs_path}")
+        print(f"Script: {args.script}")
+        print("~"*40)
+
+    shell = ShellEmulator(vfs_path=args.vfs_path, debug=args.debug)
+    if args.script:
+        #Выполнение скрипта если он есть
+        shell.run_script(args.script)
+    else:
+        #Иначе запуск обычного режима
+        shell.run()

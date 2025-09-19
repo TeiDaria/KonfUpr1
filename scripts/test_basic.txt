@@ -1,0 +1,4 @@
+# My first test script
+ls -l -a
+ls "file with spaces.txt"
+exit

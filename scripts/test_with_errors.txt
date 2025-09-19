@@ -1,0 +1,6 @@
+# Script with errors
+ls -l
+unknown_command_that_will_fail
+cd /nonexistent/path
+ls
+exit

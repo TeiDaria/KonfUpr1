@@ -1,0 +1,7 @@
+# Complex test with all the commands
+ls
+cd ~
+ls
+cd /tmp
+ls
+exit

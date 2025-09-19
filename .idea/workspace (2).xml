@@ -23,18 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;TeiDaria&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "TeiDaria"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/TeiDaria/KonfUpr1.git&quot;,
-    &quot;accountId&quot;: &quot;ab86609f-f623-400c-9a4d-df5134765f70&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/TeiDaria/KonfUpr1.git",
+    "accountId": "ab86609f-f623-400c-9a4d-df5134765f70"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -76,8 +76,7 @@
       <updated>1757060149753</updated>
       <workItem from="1757060151145" duration="3065000" />
       <workItem from="1757598962570" duration="2591000" />
-      <workItem from="1757663489121" duration="4793000" />
-      <workItem from="1758267769811" duration="1992000" />
+      <workItem from="1757663489121" duration="4796000" />
     </task>
     <task id="LOCAL-00001" summary="Part 1. REPL">
       <option name="closed" value="true" />
@@ -125,6 +124,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Part 1. REPL" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/KonfUpr1$my_shell.coverage" NAME="my_shell Coverage Results" MODIFIED="1758268440484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/KonfUpr1$my_shell.coverage" NAME="my_shell Coverage Results" MODIFIED="1757664570210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
